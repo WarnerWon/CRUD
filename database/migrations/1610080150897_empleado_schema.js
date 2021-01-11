@@ -9,7 +9,7 @@ class EmpleadoSchema extends Schema {
       table.increments()
       table.string('Nombre').notNullable()
       table.string('Apellido_Paterno').notNullable()
-      table.string('Apellido_Materno').nullable()
+      table.string('Apellido_Materno').notNullable()
       table.string('Puesto').notNullable()
       table.integer('Salario').notNullable()
       table.timestamps()

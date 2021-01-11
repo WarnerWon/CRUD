@@ -12,11 +12,13 @@ class DetectorEdad {
    * @param {Request} ctx.request
    * @param {Function} next
    */
-  async handle ({ request }, next ) {
+  async handle ({ request , response }, next ) {
     
     if (request.header('edad') >= 18){
       await next()
     }
+
+    return response.status(401).json({mensaje:'No autorizado'})
 
   }
 }
